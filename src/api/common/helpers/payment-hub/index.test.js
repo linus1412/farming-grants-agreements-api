@@ -105,7 +105,7 @@ describe('Payment Hub Helper', () => {
       expect(mockCache.get).toHaveBeenCalledWith('token')
 
       expect(global.fetch).toHaveBeenCalledWith(
-        expect.any(URL),
+        expect.any(String),
         expect.objectContaining({
           method: 'POST',
           headers: expect.objectContaining({

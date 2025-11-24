@@ -3,7 +3,7 @@ import Boom from '@hapi/boom'
 import agreementsModel from '~/src/api/common/models/agreements.js'
 import { acceptOffer } from './accept-offer.js'
 import { config } from '~/src/config/index.js'
-import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/landgrantsAdapter.js'
+import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/land-grants-adapter.js'
 
 jest.mock('~/src/api/common/models/agreements.js', () => ({
   __esModule: true,
@@ -25,7 +25,7 @@ jest.mock('~/src/api/common/models/agreements.js', () => ({
   }
 }))
 jest.mock('~/src/config/index.js')
-jest.mock('~/src/api/adapter/landgrantsAdapter.js', () => ({
+jest.mock('~/src/api/adapter/land-grants-adapter.js', () => ({
   calculatePaymentsBasedOnActions: jest.fn()
 }))
 

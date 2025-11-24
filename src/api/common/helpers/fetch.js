@@ -19,7 +19,8 @@ export const fetchWithTimeout = async (url, options) => {
   )
 
   try {
-    return await fetch(url, {
+    const input = url instanceof URL ? url.toString() : url
+    return await fetch(input, {
       ...options,
       signal: controller.signal
     })

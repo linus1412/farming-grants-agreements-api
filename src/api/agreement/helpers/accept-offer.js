@@ -1,7 +1,7 @@
 import Boom from '@hapi/boom'
 import agreementsModel from '~/src/api/common/models/agreements.js'
 import { config } from '~/src/config/index.js'
-import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/landgrantsAdapter.js'
+import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/land-grants-adapter.js'
 
 /**
  * Accept an agreement offer

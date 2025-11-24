@@ -9,7 +9,7 @@ import { updatePaymentHub } from '~/src/api/agreement/helpers/update-payment-hub
 import * as jwtAuth from '~/src/api/common/helpers/jwt-auth.js'
 import * as snsPublisher from '~/src/api/common/helpers/sns-publisher.js'
 import { config } from '~/src/config/index.js'
-import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/landgrantsAdapter.js'
+import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/land-grants-adapter.js'
 
 jest.mock('~/src/api/agreement/helpers/accept-offer.js')
 jest.mock('~/src/api/agreement/helpers/unaccept-offer.js')
@@ -21,7 +21,7 @@ jest.mock('~/src/api/agreement/helpers/get-agreement-data.js', () => ({
 }))
 jest.mock('~/src/api/common/helpers/jwt-auth.js')
 jest.mock('~/src/api/common/helpers/sns-publisher.js')
-jest.mock('~/src/api/adapter/landgrantsAdapter.js', () => ({
+jest.mock('~/src/api/adapter/land-grants-adapter.js', () => ({
   calculatePaymentsBasedOnActions: jest.fn()
 }))
 

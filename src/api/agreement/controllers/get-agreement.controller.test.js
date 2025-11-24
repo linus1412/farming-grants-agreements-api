@@ -4,7 +4,7 @@ import { createServer } from '~/src/api/index.js'
 import { statusCodes } from '~/src/api/common/constants/status-codes.js'
 import * as agreementDataHelper from '~/src/api/agreement/helpers/get-agreement-data.js'
 import * as jwtAuth from '~/src/api/common/helpers/jwt-auth.js'
-import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/landgrantsAdapter.js'
+import { calculatePaymentsBasedOnActions } from '~/src/api/adapter/land-grants-adapter.js'
 
 // Mock the modules
 jest.mock('~/src/api/common/helpers/sqs-client.js')
@@ -15,7 +15,7 @@ jest.mock('~/src/api/agreement/helpers/get-agreement-data.js', () => ({
   getAgreementDataBySbi: jest.fn()
 }))
 jest.mock('~/src/api/common/helpers/jwt-auth.js')
-jest.mock('~/src/api/adapter/landgrantsAdapter.js', () => ({
+jest.mock('~/src/api/adapter/land-grants-adapter.js', () => ({
   calculatePaymentsBasedOnActions: jest.fn()
 }))
 

@@ -1,7 +1,7 @@
 import {
   calculatePaymentsBasedOnActions,
   toLandGrantsPayload
-} from './landgrantsAdapter.js'
+} from './land-grants-adapter.js'
 import { config } from '~/src/config/index.js'
 
 jest.mock('~/src/config/index.js', () => ({
